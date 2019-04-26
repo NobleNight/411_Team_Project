@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>City Cost</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+    </head>
+    <body>
+    <div class="topnav">
+        <a href="/">Homepage</a>
+        <a href="/application">City Cost</a>
+        <a href="/history">Search History</a>
+        <a href="/deleteHist">Delete History</a>
+        <div class="topnav-right">
+            <% if (user) { %>
+            <a href="/auth/logout"><%=user.username%> is logged in</a>
+            <% } else { %>
+                <a  class = "google-btn" href="/auth/google">Login</a>
+            <% } %>
+        </div>
+    </div>
+
+
+        <header>
+            <h1>Welcome to City Cost, the tool dedicated to providing accurate cost of living measurements</h1>
+            <h2>What can we do?</h2>
+        </header>
+        <main>
+            <p>Maybe you just got the new internship/job that you wanted, or maybe you just need a change of scenery. Either way, it’s time to relocate!<br><br> Moving to a new city is fun and exciting but unfortunately the same can’t be said for the researching how much it’s going to cost. Such a simple question, yet finding the answer can become a never-ending process of scouring the internet. Here at City Cost we set out to expedite and simplify the process!! Simply fill out a couple of questions on the City Cost tab and our algorithm will clearly display an accurate approximation of your living costs based on rent and transportation. <br><br>Our goal is to make your life easier while setting you up for success, so let City Cost do the work for you!</p>
+
+
+        </main>
+    </body>
+
+
+
+</html>

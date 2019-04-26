@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Search History</title>
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+</head>
+<body>
+<div class="topnav">
+    <a href="/">Homepage</a>
+    <a href="/application">City Cost</a>
+    <a href="/history">Search History</a>
+    <a href="/deleteHist">Delete History</a>
+    <div class="topnav-right">
+        <% if (user) { %>
+        <a href="/auth/logout"><%=user.username%> is logged in</a>
+        <% } else { %>
+            <a  class = "google-btn" href="/auth/google">Login</a>
+        <% } %>
+    </div>
+</div>
+
+</body>
+<main>
+    <p>Your previous searches:</p>
+    <% for (var i = 0; i < histdata.length; i++) { %>
+        <p>Date: <%- histdata[i].queryDate %></p>
+
+        <li><%- histdata[i].city %>
+            <div><%-histdata[i].output%></div>
+
+        </li>
+
+    <% } %>
+
+
+</main>
+
+</html>
+
